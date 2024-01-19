@@ -24,12 +24,12 @@ st.title('Video to GIF Creator')
 ## Upload file ##
 st.sidebar.header('Upload file')
 uploaded_file = st.sidebar.file_uploader("Choose a file", type=['mov', 'mp4'])
-st.sidebar.markdown('''
-[Download example file](https://github.com/dataprofessor/animated-gif/raw/master/example/streamlit-app-starter-kit-screencast.mov)
+# st.sidebar.markdown('''
+# [Download example file](https://github.com/dataprofessor/animated-gif/raw/master/example/streamlit-app-starter-kit-screencast.mov)
 
----
-)
-''')
+# ---
+
+# ''')
 
 ## Display gif generation parameters once file has been uploaded ##
 if uploaded_file is not None:
