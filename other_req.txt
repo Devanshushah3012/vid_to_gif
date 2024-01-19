@@ -1,1 +1,15 @@
 https://blog.streamlit.io/host-your-streamlit-app-for-free/
+
+my mini project title : video to gif creator with customized options 
+
+1. to change the scale of the video
+2. to change the speed of video
+3. selection of video range to export
+4. to choose the fps
+5. also showing the preview of video as per the selected duration of the video to get an idea k kya thi gif banavi che 
+6. j video upload kro video banava maate ena parameters and metrics aai jaay 
+- width (px)
+- height (px)
+- duration (sec)
+- fps (of the uploaded video)
+- total frames (of the uploaded video)
