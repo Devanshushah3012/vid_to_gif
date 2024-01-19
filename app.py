@@ -19,7 +19,7 @@ if 'clip_fps' not in st.session_state:
 if 'clip_total_frames' not in st.session_state:
     st.session_state.clip_total_frames = 0  
     
-st.title('🎈 Animated GIF Maker')
+st.title('Video to GIF Creator')
 
 ## Upload file ##
 st.sidebar.header('Upload file')
@@ -28,7 +28,7 @@ st.sidebar.markdown('''
 [Download example file](https://github.com/dataprofessor/animated-gif/raw/master/example/streamlit-app-starter-kit-screencast.mov)
 
 ---
-Made with ❤️ by Chanin Nantasenamat ([Data Professor](https://youtube.com/dataprofessor))
+)
 ''')
 
 ## Display gif generation parameters once file has been uploaded ##
@@ -69,17 +69,17 @@ if uploaded_file is not None:
   # Extract video frame as a display image
   st.subheader('Preview')
 
-  with st.expander('Show image'):
+  with st.expander('Show video'):
     selected_frame = st.slider('Preview a time frame (s)', 0, int(st.session_state.clip_duration), int(np.median(st.session_state.clip_duration)) )
     clip.save_frame('frame.gif', t=selected_frame)
     frame_image = Image.open('frame.gif')
     st.image(frame_image)
 
   ## Print image parameters ##
-  st.subheader('Image parameters')
-  with st.expander('Show image parameters'):
+  st.subheader('Input Video parameters')
+  with st.expander('Show input video parameters'):
     st.write(f'File name: `{uploaded_file.name}`')
-    st.write('Image size:', frame_image.size)
+    st.write('Video size:', frame_image.size)
     st.write('Video resolution scaling', selected_resolution_scaling)
     st.write('Speed playback:', selected_speedx)
     st.write('Export duration:', selected_export_range)
@@ -136,4 +136,4 @@ if uploaded_file is not None:
 
 ## Default page ##
 else:
-  st.warning('👈 Upload a video file')
+  st.warning('👈 Upload a video file to convert it to a animated GIF')
